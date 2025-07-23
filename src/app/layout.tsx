@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "AI SaaS Startup Teammate",
-  description: "Minimalistic MVP: validate ideas, build LPs, GTM, book calls, track metrics.",
+  description:
+    "Minimalistic MVP: validate ideas, build LPs, GTM, book calls, track metrics.",
 };
 
 export default function RootLayout({
