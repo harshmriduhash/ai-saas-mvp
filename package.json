@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "description": "Minimalistic MVP for a full-stack AI SaaS teammate: validates ideas, builds LPs, GTM, books calls, tracks metrics.",
+  "keywords": ["nextjs", "ai", "saas", "startup", "vercel", "netlify", "gpt-4o", "calendly", "notion", "zapier"],
   "dependencies": {
     "react": "19.1.0",
     "react-dom": "19.1.0",
