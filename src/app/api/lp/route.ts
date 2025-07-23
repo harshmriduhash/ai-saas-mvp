@@ -6,7 +6,8 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export async function POST(req: NextRequest) {
   const { idea } = await req.json();
-  if (!idea) return NextResponse.json({ error: "Missing idea" }, { status: 400 });
+  if (!idea)
+    return NextResponse.json({ error: "Missing idea" }, { status: 400 });
 
   // 1. Generate LP copy with OpenAI
   let headline = "";
@@ -15,10 +16,14 @@ export async function POST(req: NextRequest) {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o",
       messages: [
-        { role: "system", content: "You are a SaaS landing page copywriter. Write a catchy headline and subtext for this idea." },
-        { role: "user", content: idea }
+        {
+          role: "system",
+          content:
+            "You are a SaaS landing page copywriter. Write a catchy headline and subtext for this idea.",
+        },
+        { role: "user", content: idea },
       ],
-      max_tokens: 120
+      max_tokens: 120,
     });
     const content = completion.choices[0]?.message?.content || "";
     [headline, subtext] = content.split("\n");
@@ -32,4 +37,4 @@ export async function POST(req: NextRequest) {
   const url = "https://your-landing-page.vercel.app";
 
   return NextResponse.json({ url, headline, subtext });
-} 
+}
