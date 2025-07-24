@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const { withVercel } = require('@vercel/next');
+module.exports = withVercel();
 
 export default nextConfig;

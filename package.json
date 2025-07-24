@@ -9,19 +9,31 @@
     "lint": "next lint"
   },
   "description": "Minimalistic MVP for a full-stack AI SaaS teammate: validates ideas, builds LPs, GTM, books calls, tracks metrics.",
-  "keywords": ["nextjs", "ai", "saas", "startup", "vercel", "netlify", "gpt-4o", "calendly", "notion", "zapier"],
+  "keywords": [
+    "nextjs",
+    "ai",
+    "saas",
+    "startup",
+    "vercel",
+    "netlify",
+    "gpt-4o",
+    "calendly",
+    "notion",
+    "zapier"
+  ],
   "dependencies": {
+    "@vercel/next": "^4.10.7",
+    "next": "15.4.3",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.4.3"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.4.3",
-    "@eslint/eslintrc": "^3"
+    "typescript": "^5"
   }
 }
