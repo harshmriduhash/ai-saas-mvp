@@ -1,6 +1,6 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Add your Next.js config options here if needed
+};
 
-const { withVercel } = require('@vercel/next');
-module.exports = withVercel();
-
-export default nextConfig;
+module.exports = nextConfig;
